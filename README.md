@@ -11,15 +11,6 @@ D --> E[Data Processing and Analysis]
 E --> F[User Interface]
 ```
 ```mermaid
-stateDiagram
-    [*] --> DataCollection
-    DataCollection --> DataCleanUp
-    DataCleanUp --> ShortTermStorage
-    ShortTermStorage --> DataTransmission
-    DataTransmission --> DataProcessingAndAnalysis
-    DataProcessingAndAnalysis --> UserInterface
-```
-```mermaid
 sequenceDiagram
     Sensor->>Device: Collect data (location, speed, etc.)
     Device->>Device: Clean and preprocess data
