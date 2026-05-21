@@ -2,14 +2,14 @@
 Open-source fleet monitoring for small-scale operations.
 
 ## Dataflow
-"""Mermaid
+```Mermaid
 graph TD
 A[Data Collection] --> B[Data Clean Up]
 B --> C[Short Term Storage]
 C --> D[Data Transmission]
 D --> E[Data Processing and Analysis]
 E --> F[User Interface]
-"""
+```
 
 >Data Collection in sensors and devices
 >Data clean up on device
