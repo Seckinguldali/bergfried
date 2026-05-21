@@ -3,28 +3,12 @@ Open-source fleet monitoring for small-scale operations.
 
 ## Dataflow
 ```mermaid
-graph TD
-A[Data Collection] --> B[Data Clean Up]
-B --> C[Short Term Storage]
-C --> D[Data Transmission]
-D --> E[Data Processing and Analysis]
-E --> F[User Interface]
-```
-```mermaid
 flowchart TD
 A[Data Collection] --> B[Data Clean Up]
 B --> C[Short Term Storage]
 C --> D[Data Transmission]
 D --> E[Data Processing and Analysis]
 E --> F[User Interface]
-```
-```mermaid
-workflow
-  A[Data Collection] --> B[Data Clean Up]
-  B --> C[Short Term Storage]
-  C --> D[Data Transmission]
-  D --> E[Data Processing and Analysis]
-  E --> F[User Interface]
 ```
 ```mermaid
 stateDiagram
@@ -35,21 +19,8 @@ stateDiagram
     DataTransmission --> DataProcessingAndAnalysis
     DataProcessingAndAnalysis --> UserInterface
 ```
-```mermaidsequenceDiagram
-    participant Sensor as Sensor/Device
-    participant Device as Device
-    participant Server as Central Server
-    participant Cloud as Cloud Platform
-    participant User as User Interface
-```
 ```mermaid
 sequenceDiagram
-    participant Sensor as Sensor/Device
-    participant Device as Device
-    participant Server as Central Server
-    participant Cloud as Cloud Platform
-    participant User as User Interface
-
     Sensor->>Device: Collect data (location, speed, etc.)
     Device->>Device: Clean and preprocess data
     Device->>Device: Store data temporarily
@@ -58,32 +29,6 @@ sequenceDiagram
     Server->>Server: Process and analyze data
     Server->>User: Provide insights and reports through UI
 ```
-```mermaid
-activityDiagram
-    start
-    :Data Collection in sensors and devices;
-    :Data clean up on device;
-    :Short term storage on device;
-    :Data transmission to central server and cloud platform;
-    :Data storage on central server and cloud platform;
-    :Data processing and analysis on server;
-    :User interface for monitoring and reporting;
-    stop
-```
-
-
-
-
-
-
->Data Collection in sensors and devices
->Data clean up on device
->Short term storage on device
->Data transmission to central server and cloud platform
->Data storage on central server and cloud platform
->Data processing and analysis on server
->User interface for monitoring and reporting
-
 1. **Data Collection**: Sensors and devices installed on assets collect real-time data such as location, speed, altitute, temperature, and other relevant metrics.
 2. **Data Clean Up**: The collected data is cleaned and preprocessed on the device to ensure accuracy and consistency. (e.g., removing outliers, weeding redundant data)
 3. **Short Term Storage**: Preprocessed data is stored temporarily on the device until it is confirmed that it is transmitted successfully to the central server.
