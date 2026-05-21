@@ -1,4 +1,4 @@
-# bergfried
+# Bergfried
 Open-source fleet monitoring for small-scale operations.
 
 ## Dataflow
