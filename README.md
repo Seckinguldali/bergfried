@@ -2,7 +2,7 @@
 Open-source fleet monitoring for small-scale operations.
 
 ## Dataflow
-```Mermaid
+```mermaid
 graph TD
 A[Data Collection] --> B[Data Clean Up]
 B --> C[Short Term Storage]
@@ -10,6 +10,71 @@ C --> D[Data Transmission]
 D --> E[Data Processing and Analysis]
 E --> F[User Interface]
 ```
+```mermaid
+flowchart TD
+A[Data Collection] --> B[Data Clean Up]
+B --> C[Short Term Storage]
+C --> D[Data Transmission]
+D --> E[Data Processing and Analysis]
+E --> F[User Interface]
+```
+```mermaid
+workflow
+  A[Data Collection] --> B[Data Clean Up]
+  B --> C[Short Term Storage]
+  C --> D[Data Transmission]
+  D --> E[Data Processing and Analysis]
+  E --> F[User Interface]
+```
+```mermaid
+stateDiagram
+    [*] --> DataCollection
+    DataCollection --> DataCleanUp
+    DataCleanUp --> ShortTermStorage
+    ShortTermStorage --> DataTransmission
+    DataTransmission --> DataProcessingAndAnalysis
+    DataProcessingAndAnalysis --> UserInterface
+```
+```mermaidsequenceDiagram
+    participant Sensor as Sensor/Device
+    participant Device as Device
+    participant Server as Central Server
+    participant Cloud as Cloud Platform
+    participant User as User Interface
+```
+```mermaid
+sequenceDiagram
+    participant Sensor as Sensor/Device
+    participant Device as Device
+    participant Server as Central Server
+    participant Cloud as Cloud Platform
+    participant User as User Interface
+
+    Sensor->>Device: Collect data (location, speed, etc.)
+    Device->>Device: Clean and preprocess data
+    Device->>Device: Store data temporarily
+    Device->>Server: Transmit data to central server
+    Server->>Cloud: Store data on cloud platform
+    Server->>Server: Process and analyze data
+    Server->>User: Provide insights and reports through UI
+```
+```mermaid
+activityDiagram
+    start
+    :Data Collection in sensors and devices;
+    :Data clean up on device;
+    :Short term storage on device;
+    :Data transmission to central server and cloud platform;
+    :Data storage on central server and cloud platform;
+    :Data processing and analysis on server;
+    :User interface for monitoring and reporting;
+    stop
+```
+
+
+
+
+
 
 >Data Collection in sensors and devices
 >Data clean up on device
