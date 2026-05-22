@@ -1,5 +1,5 @@
 name: Feature Request
-description: Use this template to suggest new features or improvements to existing features in the project.
+description: Suggest new features or improvements.
 labels: ["feature"]
 body:
   - type: markdown
@@ -18,11 +18,11 @@ body:
   - type: dropdown
     id: priority
     attributes:
+      label: Priority
       options:
         - High
         - Medium
         - Low
-      description: Please select the priority of the feature request.
     validations:
       required: true
 
