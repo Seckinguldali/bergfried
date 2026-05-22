@@ -18,11 +18,11 @@ body:
   - type: dropdown
     id: priority
     attributes:
+      label: Priority
       options:
         - High
         - Medium
         - Low
-      description: Please select the priority of the bug.
     validations:
       required: true
 
