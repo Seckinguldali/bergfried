@@ -1,3 +1,24 @@
-title/summary: Question about using the project
-labels: question
----Please ask your question here. Will try to answer it as soon as possible.
+name: Question
+about: Use this template if you have a question about using the project.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please ask your question here. We will try to answer it as soon as possible.
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      placeholder: email@example.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      placeholder: Describe your question or issue in detail.
+    validations:
+      required: true
