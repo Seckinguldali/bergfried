@@ -20,9 +20,9 @@ body:
     attributes:
       label: Priority
       options:
-        - High
-        - Medium
         - Low
+        - Medium
+        - High
     validations:
       required: true
 

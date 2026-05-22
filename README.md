@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="Bergfried logo" width="280" />
+</p>
+
 # Bergfried
 Open-source fleet monitoring for small-scale operations.
 
