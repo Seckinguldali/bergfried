@@ -35,10 +35,14 @@ sequenceDiagram
 ```
 
 ## Features
+Stage 1:
 - Real-time tracking of assets
 - Historical data analysis and reporting
 - User-friendly interface for easy navigation
 - Integration with existing systems and sensors
+Stage 2:
+- Customizable alerts and notifications based on user-defined thresholds
+- Possible AI integration for predictive maintenance and anomaly detection
 
 ## Technology Stack
 - **OSes**: Alpine Linux for devices, Debian for servers
