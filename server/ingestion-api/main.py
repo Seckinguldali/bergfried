@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from fastapi import Depends, HTTPException, Request
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 import secrets
+from db import init_db, save_location
 
 security = HTTPBasic()
 def check_auth(credentials: HTTPBasicCredentials = Depends(security)):
@@ -14,6 +15,7 @@ def check_auth(credentials: HTTPBasicCredentials = Depends(security)):
         raise HTTPException(status_code=401, detail="Unauthorized")
 
 app = FastAPI()
+init_db()
 
 class LocationIn(BaseModel):
     device_id: Optional[str] = None
@@ -29,5 +31,5 @@ class LocationIn(BaseModel):
 
 @app.post("/api/v1/locations")
 def create_location(location: LocationIn, auth=Depends(check_auth)):
-    print(location.model_dump())
-    return {"status": "received"}
+    row_id = save_location(location)
+    return {"status": "stored", "id": row_id}
