@@ -18,7 +18,7 @@ def save_location(location):
     data = location.model_dump(mode="json")
     
     connection = sqlite3.connect(DB_PATH)
-    curson = connection.cursor()
+    cursor = connection.cursor()
     
     cursor.execute(
         """
@@ -26,7 +26,7 @@ def save_location(location):
             device_id,
             device_timestamp,
             latitude,
-            longtitute,
+            longitude,
             accuracy_m,
             battery_level,
             bs,
@@ -40,7 +40,7 @@ def save_location(location):
             data["device_id"],
             data.get("timestamp"),
             data["latitude"],
-            data["longtitude"],
+            data["longitude"],
             data.get("accuracy_m"),
             data.get("battery_level"),
             data.get("bs"),
