@@ -33,3 +33,11 @@ class LocationIn(BaseModel):
 def create_location(location: LocationIn, auth=Depends(check_auth)):
     row_id = save_location(location)
     return {"status": "stored", "id": row_id}
+
+@app.post("/health")
+def health():
+    return {"status": "ok"}
+
+@app.get("/")
+def root():
+    return {"status", "ok"}
