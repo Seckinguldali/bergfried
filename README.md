@@ -34,6 +34,23 @@ sequenceDiagram
     Server->>User: Provide insights and reports through UI
 ```
 
+## Implementation Phases
+Bergfried should start with a simple local setup that mining engineers can run and recover without database administration.
+
+Stage 1:
+- Phones or devices send vehicle data to a local FastAPI server, stored in SQLite.
+
+Stage 2:
+- Add CSV/JSON export and a simple local dashboard.
+
+Stage 3:
+- Add Supabase sync for remote analysis and collaboration.
+
+Stage 4:
+- Add alerts, reports, user permissions, and a richer fleet UI.
+
+SQLite keeps the first setup lightweight. PostgreSQL and Supabase remain the later path for cloud access, remote SQL analysis, permissions, and managed infrastructure.
+
 ## Features
 Stage 1:
 - Real-time tracking of assets
