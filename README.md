@@ -51,6 +51,21 @@ Stage 4:
 
 SQLite keeps the first setup lightweight. PostgreSQL and Supabase remain the later path for cloud access, remote SQL analysis, permissions, and managed infrastructure.
 
+## Project Structure
+- `server/ingestion-api/`: central FastAPI service and future SQLite persistence.
+- `device/termux-phone/`: planned Android/Termux sender setup.
+- `device/alpine-device/`: planned Alpine/Linux sender setup.
+- `data/`: local database files and inspection utilities.
+
+Device options feed the same server API; they are not separate server architectures.
+
+## Phase 1 Roadmap
+- Build SQLite persistence in the ingestion API with an append-only location history table.
+- Add a simple verification flow: send one sample location and inspect stored records.
+- Add Termux as the first device sender option after the API payload is stable.
+- Add Alpine as the second device sender option using the same endpoint and payload.
+- Keep Phase 1 local: no Supabase sync, dashboard, or alerts yet.
+
 ## Features
 Stage 1:
 - Real-time tracking of assets
@@ -64,8 +79,8 @@ Stage 2:
 ## Technology Stack
 - **OSes**: Alpine Linux for devices, Debian for servers
 - **Programming Languages**: Python for data processing and analysis, JavaScript for user interface development
-- **Databases**: PostgreSQL for data storage
-- **Cloud Services**: Supabase for cloud storage and backend services
+- **Databases**: SQLite for initial local storage; PostgreSQL for later scale-out
+- **Cloud Services**: Supabase for later cloud storage and backend services
 
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes. For major changes, please open an issue first to discuss what you would like to change.
