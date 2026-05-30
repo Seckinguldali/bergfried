@@ -31,10 +31,3 @@ class LocationIn(BaseModel):
 def create_location(location: LocationIn, auth=Depends(check_auth)):
     print(location.model_dump())
     return {"status": "received"}
-
-@app.post("/api/v1/debug")
-async def debug(request: Request):
-    body = await request.body()
-    print("headers:", dict(request.headers))
-    print("body:", body.decode(errors="replace"))
-    return {"status": "debug_received"}
