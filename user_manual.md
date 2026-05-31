@@ -1,8 +1,4 @@
 
-
-
-
-
 on the server:
 git clone https://github.com/Seckinguldali/bergfried.git
 cd bergfried/server/ingestion-api
